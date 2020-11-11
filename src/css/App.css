@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.header-landing-page h1 {
+    font-size: 85px;
+    margin-bottom: 0%;
+    /* background: -webkit-linear-gradient(#eee, #333); */
+    background: -webkit-linear-gradient(#17EAD9, #5B247A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-landing-page span {
+  font-size: 18px;
+  font-weight: 200;
+  color: rgba(23, 227, 234, 0.918);
+}
+
+.all-titles h1 {
+  font-size: 36px;
+  font-weight: 200;
+  color: rgba(23, 227, 234, 0.918);
+}
+
+.search-title img {
+  width: 25%;
+  height: 25%;
+}
+
+.search-title p {
+  color: rgba(23, 227, 234, 0.918);
+}
