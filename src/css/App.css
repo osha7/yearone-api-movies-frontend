@@ -31,3 +31,8 @@
 .search-title p {
   color: rgba(23, 227, 234, 0.918);
 }
+
+.search-articles {
+  margin-top: 5%;
+  color: #FCE38A;
+}
