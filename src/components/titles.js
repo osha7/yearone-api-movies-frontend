@@ -9,6 +9,8 @@ class Titles extends React.Component {
             <div className="search-title" key={title.id} >
                 <img src={title.image} alt={title.title} />
                 <p>{title.title}</p>
+                <button className="up-vote" >👍</button>
+                <button className="down-vote" >👎</button>
             </div>
         ))
         return(

@@ -23,6 +23,9 @@
   color: rgba(23, 227, 234, 0.918);
 }
 
+.search-title {
+  margin-bottom: 10%;
+}
 .search-title img {
   width: 25%;
   height: 25%;
