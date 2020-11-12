@@ -1,6 +1,14 @@
 import React from 'react';
 
 class Titles extends React.Component {
+
+    handleUpVote = () => {
+
+    }
+
+    handleDownVote = () => {
+        
+    }
     
     render() {
         // console.log("titles", this.props.titles)
@@ -9,8 +17,8 @@ class Titles extends React.Component {
             <div className="search-title" key={title.id} >
                 <img src={title.image} alt={title.title} />
                 <p>{title.title}</p>
-                <button className="up-vote" >👍</button>
-                <button className="down-vote" >👎</button>
+                <button className="up-vote" onClick={this.handleUpVote}>👍 1</button>
+                <button className="down-vote" onClick={this.handleDownVote}>👎 2</button>
             </div>
         ))
         return(

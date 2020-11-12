@@ -4,13 +4,24 @@ import Titles from './titles';
 class Results extends React.Component {
 
     state = {
-        titles:[],
-        query:""
+        titles:[]
     }
+    
+
+    // componentDidMount = (query = "search") => {
+    //     const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
+    //     return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search?q=${query}", {
+	  
+    // fetchTitles = () => {
 
     componentDidMount = () => {
+        // let queryResult = this.props.query
         const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
-        return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/amelie", {
+        if (this.props.query) {
+            const queryResult = this.props.query
+        // the search address here accounts for a scrambling of words (unordered search)
+        // do need to account for spaces & symbols(?)
+        return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + queryResult), {
 	        "method": "GET",
 	        "headers": {
 		        "x-rapidapi-key": API_KEY,
@@ -27,7 +38,7 @@ class Results extends React.Component {
         })
         .catch(err => {
             console.error(err);
-        });
+        });}
     }
     
     render() {

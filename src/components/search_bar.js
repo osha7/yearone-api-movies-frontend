@@ -6,19 +6,30 @@ class SearchBar extends React.Component {
         searchTerm: ""
     }
 
-    movieFilterOnChange = (e) => {
-
-        console.log("here", e.target.value)
+    handleOnChange = (e) => {
         this.setState({
-            searchTerm: e.target.value
+            [e.target.name]: e.target.value
         })
-        console.log("here", this.state.searchTerm)
+    }
+
+    movieFilterOnChange = (e) => {
+        e.preventDefault()
+        // console.log("here", this.state.searchTerm)
+        this.props.retrievingQuery(this.state.searchTerm)
+        // this.setState({
+        //     searchTerm: ""
+        // })
+        
     }
 
     render(){
         return (
             <div className="search-articles">
-                <label htmlFor="searchTerm">Search: </label><input type="search" value={this.state.searchTerm} onChange={this.movieFilterOnChange} placeholder="Search Thru Movies"/>
+                <form onSubmit={this.movieFilterOnChange}>
+                <label >Search: </label>
+                <input name="searchTerm" type="search" value={this.state.searchTerm} onChange={this.handleOnChange} placeholder="Search Thru Movies"/>
+                <button type="submit" >Submit</button>
+                </form>
             </div> 
         );
     }
