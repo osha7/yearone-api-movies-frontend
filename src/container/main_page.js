@@ -14,6 +14,9 @@ class MainPage extends React.Component {
         this.retrievingQuery = this.retrievingQuery.bind(this)
     }
     
+    // setState is async...so was having a hard time changing state here w/out async/await (know it's not best practice)
+    // I also tried to code a callback of console.log() in setState, that didn't work either
+    // https://stackoverflow.com/questions/41278385/setstate-doesnt-update-the-state-immediately 
     async retrievingQuery(searchTerms){
         await this.setState({query: ''})
         // console.log("in retrievingQuery", searchTerms)

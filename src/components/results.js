@@ -30,6 +30,7 @@ class Results extends React.Component {
             return response.json()
         })
         .then(data => {
+            // console.log(data.titles)
             this.setState({
                 titles: data.titles
             })
@@ -40,12 +41,21 @@ class Results extends React.Component {
     }
     
     render() {
-        return (
-            <div className="all-titles">
-                <h1>ALL RESULTS</h1>
-                <Titles titles={this.state.titles} /> 
-            </div>
-        )
+        if (this.state.titles){
+            return (
+                <div className="all-titles">
+                    <h1>ALL RESULTS</h1>
+                    <Titles titles={this.state.titles} /> 
+                </div>
+            )
+        } else {
+            return (
+                <div className="all-titles">
+                    <h1>ALL RESULTS</h1>
+                    <h3>We're Sorry There Are No Matching Titles</h3> 
+                </div>
+            )
+        }
     }
 }
 

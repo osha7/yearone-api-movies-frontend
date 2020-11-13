@@ -7,7 +7,7 @@
     margin-bottom: 0%;
     /* background: -webkit-linear-gradient(#eee, #333); */
     background: -webkit-linear-gradient(#17EAD9, #5B247A);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -21,6 +21,10 @@
   font-size: 36px;
   font-weight: 200;
   color: rgba(23, 227, 234, 0.918);
+}
+
+.all-titles h3 {
+  color: red;
 }
 
 .search-title {
