@@ -3,12 +3,12 @@
 }
 
 .header-landing-page h1 {
-    font-size: 85px;
-    margin-bottom: 0%;
-    /* background: -webkit-linear-gradient(#eee, #333); */
-    background: -webkit-linear-gradient(#17EAD9, #5B247A);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 85px;
+  margin-bottom: 0%;
+  /* background: -webkit-linear-gradient(#eee, #333); */
+  background: -webkit-linear-gradient(#17EAD9, #5B247A);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-landing-page span {
@@ -46,19 +46,30 @@
 
 .movie-page {
   margin-bottom: 20%;
+  justify-content: center;
+  text-align: center;
 }
 
 .movie-page h1 {
-  margin-top: 10%;
-  color: #FCE38A;
+ 
+  font-size: 50px;
   font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  /* border-top: 1px solid #FCE38A;
+  border-bottom: 1px solid #FCE38A; */
+  color: #FCE38A;
 }
 
 .movie-page img {
-  width: 50%;
-  height: 50%;
+  width: 35%;
+  height: 35%;
 }
 
 .movie-page p {
+  padding: 2%;
+  margin: 0 auto;
   color: #FCE38A;
+  width: 25%;
 }
