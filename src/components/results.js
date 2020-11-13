@@ -7,7 +7,6 @@ class Results extends React.Component {
         titles:[]
     }
     
-
     // componentDidMount = (query = "search") => {
     //     const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
     //     return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search?q=${query}", {
@@ -15,13 +14,12 @@ class Results extends React.Component {
     // fetchTitles = () => {
 
     componentDidMount = () => {
-        // let queryResult = this.props.query
+        let queryResult = this.props.query
         const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
-        if (this.props.query) {
-            const queryResult = this.props.query
-        // the search address here accounts for a scrambling of words (unordered search)
-        // do need to account for spaces & symbols(?)
+        // the API search address here accounts for a scrambling of words (unordered search)
+        console.log("api")
         return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + queryResult), {
+        // return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/spiderman", {
 	        "method": "GET",
 	        "headers": {
 		        "x-rapidapi-key": API_KEY,
@@ -38,7 +36,7 @@ class Results extends React.Component {
         })
         .catch(err => {
             console.error(err);
-        });}
+        });
     }
     
     render() {

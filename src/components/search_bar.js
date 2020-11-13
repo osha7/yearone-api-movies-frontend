@@ -10,15 +10,17 @@ class SearchBar extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         })
+
     }
 
     movieFilterOnChange = (e) => {
         e.preventDefault()
-        // console.log("here", this.state.searchTerm)
+        console.log("here", this.state.searchTerm)
+        // this.props.clearQuery()
         this.props.retrievingQuery(this.state.searchTerm)
-        // this.setState({
-        //     searchTerm: ""
-        // })
+        this.setState({
+            searchTerm: ""
+        })
         
     }
 
