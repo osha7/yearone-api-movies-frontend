@@ -1,4 +1,5 @@
 import React from 'react';
+import Votes from './up_down_vote';
 
 function MovieDetail(props) {
     const{
@@ -16,6 +17,7 @@ function MovieDetail(props) {
                 
                 <h1>{title}</h1>
                 <img src={poster} alt={title} />
+                <Votes />
                 <p>
                    
                     Release Year: {releaseYear} <br />

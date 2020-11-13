@@ -40,7 +40,7 @@ class MainPage extends React.Component {
             );
         } else {
             return (
-                <div className="main-page">
+                <div id="initial" className="main-page">
                 <SearchBar retrievingQuery={this.retrievingQuery} />
                 </div>
             );
