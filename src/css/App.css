@@ -35,11 +35,30 @@
   height: 25%;
 }
 
-.search-title p {
+.search-title p, a {
   color: rgba(23, 227, 234, 0.918);
 }
 
 .search-articles {
   margin-top: 5%;
+  color: #FCE38A;
+}
+
+.movie-page {
+  margin-bottom: 20%;
+}
+
+.movie-page h1 {
+  margin-top: 10%;
+  color: #FCE38A;
+  font-weight: 200;
+}
+
+.movie-page img {
+  width: 50%;
+  height: 50%;
+}
+
+.movie-page p {
   color: #FCE38A;
 }

@@ -52,7 +52,7 @@ class Results extends React.Component {
             return (
                 <div className="all-titles">
                     <h1>ALL RESULTS</h1>
-                    <h3>We're Sorry There Are No Matching Titles</h3> 
+                    <h3>There Are No Matching Titles</h3> 
                 </div>
             )
         }
