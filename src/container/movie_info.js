@@ -1,4 +1,5 @@
 import React from 'react'
+import MovieDetail from '../components/movie_detail'
 
 class MoviePage extends React.Component {
 
@@ -29,7 +30,7 @@ class MoviePage extends React.Component {
             return response.json()
         })
         .then(data => {
-            console.log(data)
+            // console.log(data)
             this.setState({
                 id: data.id,
                 title: data.title,
@@ -42,18 +43,27 @@ class MoviePage extends React.Component {
             console.error(err);
         });
     }
+
+    returnToSearch = () => {
+        // console.log('return to search', this.props)
+        window.setTimeout(() => {
+            this.props.history.push("/");
+         }, 500)
+    }
     
     render() {
+        const{
+            id,
+            title,
+            director,
+            releaseYear,
+            description,
+            poster
+        } = this.state
         return(
-            <div className="movie-page">
-                <h1>{this.state.title}</h1>
-                <img src={this.state.poster} alt={this.state.title} />
-                <p>
-                    Release Year: {this.state.releaseYear}
-                </p>
-                <p>
-                    {this.state.description}
-                </p>
+            <div className="movie-info">
+                <button className="return-to-search" onClick={this.returnToSearch} >Return to Search</button>
+                <MovieDetail id={id} title={title} director={director} releaseYear={releaseYear} description={description} poster={poster} />
             </div>
         )
     }
