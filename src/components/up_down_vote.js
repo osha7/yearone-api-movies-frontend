@@ -2,6 +2,11 @@ import React from 'react';
 
 class Votes extends React.Component {
 
+    state = {
+        upVotes: '',
+        downVotes:''
+    }
+
 
     handleUpVote = () => {
 
@@ -10,12 +15,12 @@ class Votes extends React.Component {
     handleDownVote = () => {
         
     }
-    
+
     render() {
         return(
             <div>
-                <button className="up-vote" onClick={this.handleUpVote}>👍 1</button>
-                <button className="down-vote" onClick={this.handleDownVote}>👎 2</button>
+                <button className="up-vote" onClick={this.handleUpVote}>👍 {this.state.upVotes}</button>
+                <button className="down-vote" onClick={this.handleDownVote}>👎 {this.state.downVotes}</button>
             </div>
         )
     }

@@ -14,9 +14,11 @@ class SearchBar extends React.Component {
     }
 
     movieFilterOnChange = (e) => {
+        console.log(this.props)
         e.preventDefault()
         console.log("here", this.state.searchTerm)
         // this.props.clearQuery()
+        // this.props.clearQueue()
         this.props.retrievingQuery(this.state.searchTerm)
         this.setState({
             searchTerm: ""

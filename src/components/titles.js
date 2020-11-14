@@ -9,11 +9,11 @@ function Titles(props) {
             
         <div className="search-title" key={title.id} >
             <img src={title.image} alt={title.title} />
-            <p><a href={'/movies/' + title.id} movieId={title.id}>{title.title}</a></p>
+            <p><a href={'/movies/' + title.id} movieid={title.id}>{title.title}</a></p>
             <Votes />
         </div>
     ))
-    
+
     return(
         <div>
             {searchTitles}

@@ -15,10 +15,10 @@ class MoviePage extends React.Component {
 
     componentDidMount = () => {
         // console.log(this.props.match.params.id)
-        let movieId = this.props.match.params.id
+        let movieid = this.props.match.params.id
         const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
 
-        return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/" + movieId), {
+        return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/" + movieid), {
         // return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/spiderman", {
 	        "method": "GET",
 	        "headers": {
