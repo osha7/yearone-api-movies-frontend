@@ -25,4 +25,6 @@ https://github.com/osha7/yearone-movie-api-backend
 
 
 ![Search Bar](https://i.imgur.com/3I1lVuX.jpg)
+![Search Results](https://i.imgur.com/a7Dqi8F.jpg)
+![Movie Info Page](https://i.imgur.com/fgdaV8i.jpg)
 ##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
