@@ -52,6 +52,7 @@ class MoviePage extends React.Component {
     }
     
     render() {
+        // console.log("movie-info", this.props.match.params.id)
         const{
             id,
             title,
@@ -63,7 +64,7 @@ class MoviePage extends React.Component {
         return(
             <div className="movie-info">
                 <button className="return-to-search" onClick={this.returnToSearch} >Return to Search</button>
-                <MovieDetail id={id} title={title} director={director} releaseYear={releaseYear} description={description} poster={poster} />
+                <MovieDetail id={this.props.match.params.id} title={title} director={director} releaseYear={releaseYear} description={description} poster={poster} />
             </div>
         )
     }

@@ -39,7 +39,7 @@ class Votes extends React.Component {
     }
 
     handleUpVote = () => {
-        console.log(this.props, this.state)
+        // console.log(this.props, this.state)
         const movieId = this.props.id
         const editUrl = "http://localhost:3003/movies/"
         // console.log(editUrl + movieId)
@@ -54,10 +54,6 @@ class Votes extends React.Component {
         this.setState( prevState => ({
             upVotes: prevState.upVotes + 1
         })) 
-    }
-
-    componentDidUpdate = () => {
-        console.log(this.state)
     }
 
     handleDownVote = () => {
@@ -76,6 +72,10 @@ class Votes extends React.Component {
             downVotes: prevState.downVotes + 1
         })) 
     }
+
+     // componentDidUpdate = () => {
+    //     console.log(this.state)
+    // }
 
     render() {
         // console.log(this.props)

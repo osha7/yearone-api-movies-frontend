@@ -1,5 +1,6 @@
 import React from 'react';
 import Votes from "./up_down_vote"
+import {Link}from 'react-router-dom'
 
 function Titles(props) {
     // console.log(props)
@@ -9,8 +10,10 @@ function Titles(props) {
     // console.log("individual", title),
             
         <div className="search-title" key={title.id} >
-            <img src={title.image} alt={title.title} />
-            <p><a href={'/movies/' + title.id} movieid={title.id}>{title.title}</a></p>
+            <img src={title.image} alt={title.title} /><br />
+            <Link to={'/movies/' + title.id} movieid={title.id}>{title.title}</Link>
+
+            {/* <p><a href={'/movies/' + title.id} movieid={title.id}>{title.title}</a></p> */}
             <Votes id={title.id} title={title.title} />
         </div>
     ))
