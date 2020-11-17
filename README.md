@@ -32,7 +32,7 @@ https://github.com/osha7/yearone-movie-api-backend
 - rake db:create
 - rake db:migrate
 #### To run the app in the development mode:
-- rails s
+- rails s  
 RUN AT:[http://localhost:3002](http://localhost:3002) ((JSON database can be viewed at [http://localhost:3002/movies](http://localhost:3002/movies)))
 application should automatically open to port 3002
 the application will not successfully run if on any other port (front end making calls to local host 3002)
