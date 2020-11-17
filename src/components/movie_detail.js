@@ -27,9 +27,8 @@ class MovieDetail extends React.Component {
                    
                     Release Year: {releaseYear} <br />
                     Director: {director} <br />
-                    _
-                </p>
-                <p>
+                    _ 
+                    <br /><br />
                     {description}
                 </p>
             </div>

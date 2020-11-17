@@ -14,11 +14,9 @@ class SearchBar extends React.Component {
     }
 
     movieFilterOnChange = (e) => {
-        // console.log(this.props)
+ 
         e.preventDefault()
-        // console.log("here", this.state.searchTerm)
-        // this.props.clearQuery()
-        // this.props.clearQueue()
+
         this.props.retrievingQuery(this.state.searchTerm)
         this.setState({
             searchTerm: ""
@@ -29,11 +27,21 @@ class SearchBar extends React.Component {
     render(){
         return (
             <div className="search-articles">
-                <form onSubmit={this.movieFilterOnChange}>
-                <label >Search: </label>
-                <input name="searchTerm" type="search" value={this.state.searchTerm} onChange={this.handleOnChange} placeholder="Search Thru Movies"/>
-                <button type="submit" >Submit</button>
-                </form>
+                 {/* <form onSubmit={this.movieFilterOnChange}>
+                 <label >Search: </label>
+                <input className="search-input" name="searchTerm" type="search" value={this.state.searchTerm} onChange={this.handleOnChange} placeholder="Search Thru Movies"/>
+                 <button className="search-button" type="submit" >Submit </button>
+                 </form> */}
+                    
+                    <div className="search-box">
+                        <form onSubmit={this.movieFilterOnChange}>
+                            <input className="search-input" name="searchTerm" type="search" value={this.state.searchTerm} onChange={this.handleOnChange} placeholder="Search For Movies..."/>
+                            <a className="search-btn" onClick={this.movieFilterOnChange}>
+                            <i className="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </form>
+                    </div>
+         
             </div> 
         );
     }

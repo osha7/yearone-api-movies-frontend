@@ -11,7 +11,7 @@ function Titles(props) {
             
         <div className="search-title" key={title.id} >
             <img src={title.image} alt={title.title} /><br />
-            <Link to={'/movies/' + title.id} movieid={title.id}>{title.title}</Link>
+           <Link to={'/movies/' + title.id} movieid={title.id}> <h2>{title.title}</h2></Link>
 
             {/* <p><a href={'/movies/' + title.id} movieid={title.id}>{title.title}</a></p> */}
             <Votes id={title.id} title={title.title} />
