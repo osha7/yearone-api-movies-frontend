@@ -7,7 +7,7 @@ Upvote & Downvote movies while saving data to a local backend server using a Pos
 ## Application - Front End Repository:
 https://github.com/osha7/yearone-api-movies-frontend 
 
-- Navigate to frontend github repo - For & Clone Repository
+- Navigate to frontend github repo - Fork & Clone Repository
 - Clone repository in your local terminal
 - Project requires React  or higher
 
@@ -33,8 +33,9 @@ https://github.com/osha7/yearone-movie-api-backend
 - rake db:migrate
 #### To run the app in the development mode:
 - rails s
-- application should automatically open to port 3002
-- the application will not successfully run if on any other (front end making calls to local host 3002)
+RUN AT:[http://localhost:3002](http://localhost:3002) ((JSON database can be viewed at [http://localhost:3002/movies](http://localhost:3002/movies)))
+application should automatically open to port 3002
+the application will not successfully run if on any other port (front end making calls to local host 3002)
 
 #### To make database queries from backend:
 - rails c
