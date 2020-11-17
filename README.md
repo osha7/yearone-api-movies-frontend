@@ -1,5 +1,5 @@
 # Osha Groetz - YearOne MOVIE API
-Search movies with async Fetch requests to RapidAPI's IMDB Movie Database
+Search movies with async Fetch requests to RapidAPI's IMDB Movie Database  
 Upvote & Downvote movies while saving data to a local backend server using a PostgreSQL database
 
 ## How to setup and run your application: 
@@ -9,7 +9,7 @@ https://github.com/osha7/yearone-api-movies-frontend
 
 - Navigate to frontend github repo - Fork & Clone Repository
 - Clone repository in your local terminal
-- Project requires React  or higher
+- Project was built on ReactJS 17.0.1 or higher
 
 ### In the project directory command line,run:
 - npm install  
@@ -18,7 +18,7 @@ https://github.com/osha7/yearone-api-movies-frontend
 RUN AT: [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-### Connect program to backend for api calls to obtain data of upvotes & downvotes:  
+### Connect program to backend for api calls to persist & obtain data of upvotes & downvotes:  
 
 ## Application - Back End Repository:
 https://github.com/osha7/yearone-movie-api-backend
