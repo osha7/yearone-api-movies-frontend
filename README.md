@@ -14,7 +14,7 @@ https://github.com/osha7/yearone-api-movies-frontend
 ### In the project directory command line,run:
 - npm install  
 #### To run the app in the development mode:  
-- npm start  
+- npm start   
 RUN AT: [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
