@@ -55,13 +55,11 @@ class Votes extends React.Component {
                 upVotes: data.movie.up_votes
             })
         })
-        
     }
 
     handleDownVote = () => {
         const movieId = this.props.id
         const editUrl = "http://localhost:3003/movies/"
-        // console.log(editUrl + movieId)
         fetch((editUrl + movieId), {
             method: 'PUT',
             headers: {

@@ -1,6 +1,6 @@
-import React from 'react'
-import SearchBar from '../components/search_bar'
-import Results from '../components/results'
+import React from 'react';
+import SearchBar from '../components/search_bar';
+import Results from '../components/results';
 
 class MainPage extends React.Component {
 
@@ -37,14 +37,14 @@ class MainPage extends React.Component {
         if (this.state.query){
             return (
                 <div className="main-page">
-                <SearchBar retrievingQuery={this.retrievingQuery}/>
-                <Results query={this.state.query}/>
+                    <SearchBar retrievingQuery={this.retrievingQuery}/>
+                    <Results query={this.state.query}/>
                 </div>
             );
         } else {
             return (
                 <div id="initial" className="main-page">
-                <SearchBar clearQuery={this.clearQuery} retrievingQuery={this.retrievingQuery} />
+                    <SearchBar clearQuery={this.clearQuery} retrievingQuery={this.retrievingQuery} />
                 </div>
             );
         }

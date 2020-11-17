@@ -1,8 +1,8 @@
 
 import './css/App.css';
-import HeaderLandingPage from './container/header_landing_page'
-import MainPage from './container/main_page'
-import MovieInfo from './container/movie_info'
+import HeaderLandingPage from './container/header_landing_page';
+import MainPage from './container/main_page';
+import MovieInfo from './container/movie_info';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 function App() {

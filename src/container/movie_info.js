@@ -1,5 +1,5 @@
-import React from 'react'
-import MovieDetail from '../components/movie_detail'
+import React from 'react';
+import MovieDetail from '../components/movie_detail';
 
 class MoviePage extends React.Component {
 
@@ -70,4 +70,4 @@ class MoviePage extends React.Component {
     }
 }
 
-export default MoviePage
+export default MoviePage;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Titles from './titles';
 
 class Results extends React.Component {
@@ -6,12 +6,6 @@ class Results extends React.Component {
     state = {
         titles:[]
     }
-    
-    // componentDidMount = (query = "search") => {
-    //     const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
-    //     return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search?q=${query}", {
-	  
-    // fetchTitles = () => {
 
     componentDidMount = () => {
         let queryResult = this.props.query
@@ -19,7 +13,6 @@ class Results extends React.Component {
         // the API search address here accounts for a scrambling of words (unordered search)
         // console.log("api")
         return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + queryResult), {
-        // return fetch("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/spiderman", {
 	        "method": "GET",
 	        "headers": {
 		        "x-rapidapi-key": API_KEY,
@@ -59,4 +52,4 @@ class Results extends React.Component {
     }
 }
 
-export default Results
+export default Results;

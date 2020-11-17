@@ -19,12 +19,10 @@ class MovieDetail extends React.Component {
 
         return(
             <div className="movie-page">
-                
                 <h1>{title}</h1>
                 <img src={poster} alt={title} />
                 <Votes id={id}/>
                 <p>
-                   
                     Release Year: {releaseYear} <br />
                     Director: {director} <br />
                     _ 
