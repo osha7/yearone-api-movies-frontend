@@ -24,6 +24,7 @@ class MainPage extends React.Component {
     //     console.log(this.state.query)
     // }
 
+    // best option: - async/await not good to use in this situation
     retrievingQuery = (searchTerms) =>{
         let newQueryString = searchTerms.split(" ").join('')
         this.setState({query: ''}, () => {

@@ -13,13 +13,11 @@ class Votes extends React.Component {
     }
 
     componentDidMount = () => {
-        // console.log("strange cDM", this.props, this.state)
         const movieAppInfo = this.props
         this.findOrCreateMovie(movieAppInfo)
     }
 
     findOrCreateMovie = (movieAppInfo) => {
-        // console.log(movieAppInfo)
         fetch("http://localhost:3003/create-or-return-movie", {
             method: 'POST',
             headers: {
@@ -30,7 +28,6 @@ class Votes extends React.Component {
         })
         .then(resp => resp.json())
         .then(data => {
-            // console.log("33", data)
             this.setState({
                 upVotes: data.movie.up_votes,
                 downVotes: data.movie.down_votes
@@ -51,9 +48,14 @@ class Votes extends React.Component {
             },
             body: JSON.stringify("upvote")
         })
-        this.setState( prevState => ({
-            upVotes: prevState.upVotes + 1
-        })) 
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data.movie.up_votes)
+            this.setState({
+                upVotes: data.movie.up_votes
+            })
+        })
+        
     }
 
     handleDownVote = () => {
@@ -68,9 +70,13 @@ class Votes extends React.Component {
             },
             body: JSON.stringify("downvote")
         })
-        this.setState( prevState => ({
-            downVotes: prevState.downVotes + 1
-        })) 
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data.movie.down_votes)
+            this.setState({
+                downVotes: data.movie.down_votes
+            })
+        })
     }
 
      // componentDidUpdate = () => {
@@ -78,7 +84,6 @@ class Votes extends React.Component {
     // }
 
     render() {
-        // console.log(this.props)
         return(
             <div>
                 <button className="up-vote" onClick={this.handleUpVote}>👍 {this.state.upVotes}</button>
