@@ -9,26 +9,42 @@ https://github.com/osha7/yearone-api-movies-frontend
 
 - Navigate to frontend github repo - For & Clone Repository
 - Clone repository in your local terminal
+- Project requires React  or higher
 
-### In this project directory,run:
+### In the project directory command line,run:
 - npm install  
-To run the app in the development mode.  
+#### To run the app in the development mode:  
 - npm start  
 RUN AT: [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+### Connect program to backend for api calls to obtain data of upvotes & downvotes:  
 
 ## Application - Back End Repository:
 https://github.com/osha7/yearone-movie-api-backend
 
-### Connect program to backend for api calls to obtain data of upvotes & downvotes:  
 - Navigate to backend github repo - Fork & Clone Repository
 - Clone repository in your local terminal
+- Project was built on Rails 6.0.3
 
-Landing Page Search Bar:  
+### In the project directory command line,run:
+- bundle install
+- rake db:create
+- rake db:migrate
+#### To run the app in the development mode:
+- rails s
+- application should automatically open to port 3002
+- the application will not successfully run if on any other (front end making calls to local host 3002)
+
+#### To make database queries from backend:
+- rails c
+
+# Landing Page Search Bar:  
 ![Search Bar](https://i.imgur.com/3I1lVuX.jpg)
 
-Search Results:  
-![Search Results](https://i.imgur.com/a7Dqi8F.jpg)
+# Search Results:  
+![Search Results](https://i.imgur.com/wImAHiV.jpg)
 
-Movie Info Page:  
+# Movie Info Page:  
 ![Movie Info Page](https://i.imgur.com/fgdaV8i.jpg)
 ##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
