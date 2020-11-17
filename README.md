@@ -23,8 +23,12 @@ https://github.com/osha7/yearone-movie-api-backend
 - Navigate to backend github repo - Fork & Clone Repository
 - Clone repository in your local terminal
 
-
+Landing Page Search Bar:  
 ![Search Bar](https://i.imgur.com/3I1lVuX.jpg)
+
+Search Results:  
 ![Search Results](https://i.imgur.com/a7Dqi8F.jpg)
+
+Movie Info Page:  
 ![Movie Info Page](https://i.imgur.com/fgdaV8i.jpg)
 ##### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
