@@ -27,7 +27,7 @@ class MainPage extends React.Component {
     retrievingQuery = (searchTerms) =>{
         let newQueryString = searchTerms.split(" ").join('')
         this.setState({query: ''}, () => {
-            console.log("clear", this.state.query)
+            // console.log("clear", this.state.query)
             this.setState({query: newQueryString},  () => {console.log("should have state", this.state)})
         })
     }
