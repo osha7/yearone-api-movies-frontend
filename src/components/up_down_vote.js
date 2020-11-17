@@ -72,6 +72,9 @@ class Votes extends React.Component {
             },
             body: JSON.stringify("downvote")
         })
+        this.setState( prevState => ({
+            downVotes: prevState.downVotes + 1
+        })) 
     }
 
     render() {
