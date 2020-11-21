@@ -18,7 +18,9 @@ class Votes extends React.Component {
     }
 
     findOrCreateMovie = (movieAppInfo) => {
-        fetch("http://localhost:3003/create-or-return-movie", {
+        const BASE = process.env.NODE_ENV === 'production' ? "https://movie-api-search.herokuapp.com/create-or-return-movie" : "http://localhost:3003/create-or-return-movie"
+        // fetch("http://localhost:3003/create-or-return-movie", {
+        fetch(BASE, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +40,9 @@ class Votes extends React.Component {
     handleUpVote = () => {
         // console.log(this.props, this.state)
         const movieId = this.props.id
-        const editUrl = "http://localhost:3003/movies/"
+        const editUrl = process.env.NODE_ENV === 'production' ? "https://movie-api-search.herokuapp.com/movies/" : "http://localhost:3003/movies/"
+
+        // const editUrl = "http://localhost:3003/movies/"
         // console.log(editUrl + movieId)
         fetch((editUrl + movieId), {
             method: 'PUT',
@@ -59,7 +63,9 @@ class Votes extends React.Component {
 
     handleDownVote = () => {
         const movieId = this.props.id
-        const editUrl = "http://localhost:3003/movies/"
+        const editUrl = process.env.NODE_ENV === 'production' ? "https://movie-api-search.herokuapp.com/movies/" : "http://localhost:3003/movies/"
+        // const editUrl = "http://localhost:3003/movies/"
+
         fetch((editUrl + movieId), {
             method: 'PUT',
             headers: {
