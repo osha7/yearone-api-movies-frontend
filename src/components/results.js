@@ -9,7 +9,7 @@ class Results extends React.Component {
 
     componentDidMount = () => {
         let queryResult = this.props.query
-        const API_KEY = "0e04a2cb3amsh264b46f00e0337dp195aeajsnaf8da500889c";
+        const API_KEY = process.env.REACT_APP_RAPID_API_KEY;
         // the API search address here accounts for a scrambling of words (unordered search)
         // console.log("api")
         return fetch(("https://imdb-internet-movie-database-unofficial.p.rapidapi.com/search/" + queryResult), {
